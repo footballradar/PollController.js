@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+process.env.NODE_ENV = "test";
+process.env.TAP_DIAG = 1;
+
+var glob = require("glob");
+var path = require("path");
+
+require("babel-register");
+
+glob("test/**/*.spec.js", function(_, files) {
+    files.forEach(function(file) {
+        require(path.join(process.cwd(), file));
+    });
+});
