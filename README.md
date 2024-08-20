@@ -1,4 +1,8 @@
-# PollController.js
+> [!NOTE]
+> Archived 20th August 2024 as this is no longer supported
+
+PollController.js
+=================
 
 It's just an interval which runs mulitple functions. For example you may want to poll a settings endpoint and a status endpoint every 3 seconds. With a `pollController` we can have both of these functions run of the same loop and that loop is managed in one place. 
 
